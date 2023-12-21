@@ -12,7 +12,7 @@ contract JingleAllTheWay is ERC20, Ownable2Step {
     uint256 constant THRESHOLD = 25122 ether;
     uint256 constant COOLDOWN_OFFSET = 86400;
     uint256 constant BUY_LIMIT = MAX_SUPPLY / 200;
-    uint256 constant SELL_LIMIT = MAX_SUPPLY / 1000;
+    uint256 constant SELL_LIMIT = MAX_SUPPLY / 500;
     uint256 constant TURBO_LIMIT = 220000000 ether;
 
     string constant name0 = "JingleAllTheWay";
