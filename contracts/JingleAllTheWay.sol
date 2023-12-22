@@ -1,5 +1,9 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8.23;
+pragma solidity ^0.8.20;
+
+// https://t.me/JATWerc20
+// https://x.com/JAWTerc20
+// https://jatw.org/
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable2Step.sol";
@@ -48,8 +52,8 @@ contract JingleAllTheWay is ERC20, Ownable2Step {
         firstTime[msg.sender] = 1;
         firstTime[_feeReceiver] = 1;
         _mint(msg.sender, MAX_SUPPLY);
-        first = new TurboNFT(name1, symbol1, _URIPrefix1, _URISuffix1, msg.sender);
-        second = new TurboNFT(name2, symbol2, _URIPrefix2, _URISuffix2, msg.sender);
+        first = new TurboNFT(name1, symbol1, _URIPrefix1, _URISuffix1, msg.sender, msg.sender);
+        second = new TurboNFT(name2, symbol2, _URIPrefix2, _URISuffix2, msg.sender, msg.sender);
         turbo = new Turbo(name3, symbol3, msg.sender, TURBO_LIMIT);
         nftProviders[address(first)] = true;
         nftProviders[address(second)] = true;
